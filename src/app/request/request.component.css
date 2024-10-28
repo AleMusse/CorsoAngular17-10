@@ -1,0 +1,26 @@
+input{
+    width: 30%;
+    display: inline-block;
+    margin-right: 5%;
+}
+select{
+    width: 30%;
+    display: inline-block;
+    margin-right: 30%;
+    margin-bottom: 2%;
+}
+.rock{
+    color: red;
+}
+.pop{
+    color: blue;
+}
+.default{
+    color: green;
+}
+.err1{
+    text-align: center;
+}
+.err2{
+    display: none;    
+}

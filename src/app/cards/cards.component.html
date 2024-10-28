@@ -1,0 +1,50 @@
+
+
+<div class="bottoni" *ngIf="addy && carteOff">
+  <button (click)="addy2()" >aggiungi scarpa</button>
+  <button>resetta</button>
+</div>
+
+<div  class="flex" *ngIf="carteOff && cioa ">
+  <div class="card text-bg-dark" *ngFor="let scarpa of scarpe;let i=index" (click)="passaDettagli(scarpa)">
+    <img [src]="scarpa.foto" class="card-img" alt="..." />
+    <div class="card-img-overlay">
+        <h5 class="card-title" [ngClass]="{
+            'cè':scarpa.disponibile,
+            'ncè': !scarpa.disponibile,
+            barra : !scarpa.disponibile
+            }">
+            {{scarpa.nome}} <div [ngClass]="scarpa.disponibile? 'cerchioV':'cerchioR'"></div>
+        </h5>
+        <p class="card-text"><b>Colore: </b>{{scarpa.colore}} </p>
+        <p class="card-text"><b>taglia: </b>{{scarpa.taglia}} </p>
+        <p class="card-text"><b>Costo </b>{{ scarpa.prezzo | currency: "EUR" }} </p>
+        <p class="card-text"><b>Quantita: </b>{{scarpa.quantita >=1 ? scarpa.quantita : 'non disponibile'}}</p>
+        <div class="flut">
+            <p [ngClass]="scarpa.disponibile? 'disp':'nodisp'"><b>{{scarpa.nome}}</b></p>
+            <p>{{scarpa.disponibile? "Disponibile":"Non Disponibile"}}</p>
+        </div>
+
+        
+
+    </div>
+  </div>
+</div>
+
+<app-dettail-card 
+[detta2]="grut2" 
+(vaiPaginaIniziale)="onBack(grut2)" 
+*ngIf="!carteOff" 
+(Ciambella)="deletS(grut2.id)"
+
+></app-dettail-card>
+
+<app-addscarpa
+  *ngIf="!addy" 
+  [addyy]="!addy"
+  (compaddyy)="newaddy()"
+
+  [scarpa1]="scarpa"
+  (addScarpa)="scarpaAdd($event)"
+  
+></app-addscarpa>

@@ -1,0 +1,103 @@
+h5, p {
+    color: black;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding: 0px 5px;
+    
+}
+h5{
+    font-size: .9rem;
+    color: rgb(51, 51, 51);
+}
+p{
+    margin-bottom: 0px;
+}
+.flut{
+    position: relative;
+    top: 41%;
+    text-align: center;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px auto;
+    min-width: 900px;
+    max-width: 1100px;
+    margin-top: 50px;
+}
+.card{
+    width: 22%;
+    
+    height: 200px;
+    background-color: lightgray;
+    margin: 5px;
+    text-align: left;
+    font-size: 10px;
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 1px black;
+
+}
+.card:hover{
+    box-shadow: 0px 0px 6px 1.5px black;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-img-overlay {
+    
+    padding: 0px;
+}
+button{
+    border: 1px black solid;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    height: 25px;
+    line-height: 10px;
+    text-align: center;
+    margin-bottom:2px ;
+    margin-right: 10px;
+}
+button:active{
+    background-color: white;
+    border: 1px rgb(0, 0, 0) solid;
+    color: black;
+}
+.disp{
+    color: green;
+}
+.nodisp{
+    color: rgb(215, 15, 15);
+    text-decoration: line-through;
+}
+
+
+
+.cerchioV{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(1, 173, 1);
+    border-radius: 50%;
+    display: inline-block;
+}
+.cerchioR{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(219, 59, 5);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.bottoni{
+    /* margin: 0 auto; */
+    /* margin: 50px Auto;
+    position: relative; */
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}

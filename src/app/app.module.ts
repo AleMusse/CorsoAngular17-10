@@ -1,30 +1,32 @@
-import { NgModule } from '@angular/core'; 
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-
-import { HttpClientModule } from '@angular/common/http'; // quando è barrata significa DEPRECATA
-import { provideHttpClient } from '@angular/common/http';
-// provide è una funzione e non una class per questo è con la lettera minusciola
-// e sostituisce HttpClientModule 
-
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser'; //per visualizzare il layout nel browser o smartphone 
+import { AppRoutingModule } from './app-routing.module';//per gestire il routing
+import { FormsModule } from '@angular/forms'; //per lavorare con le FORM per i metodi di validazione ed intercettazione dei valori immessi
+import { HttpClientModule, provideHttpClient } from '@angular/common/http'; //per gestire richieste HTTP
 import { AppComponent } from './app.component';
-import { RequestComponent } from './request/request.component'; 
+import { CardsComponent } from './cards/cards.component';
+import { DettailCardComponent } from './dettail-card/dettail-card.component';
+import { AddscarpaComponent } from './addscarpa/addscarpa.component'; //componente di default
+
+
+
 
 @NgModule(
   {
+    //annoto i componenti del progetto
   declarations: [
     AppComponent,
-    RequestComponent,  
+    CardsComponent,
+    DettailCardComponent,
+    AddscarpaComponent,
   ],
-  imports: [ 
+  imports: [ //annoto i moduli del progetto
     BrowserModule,
-    AppRoutingModule,  
-    HttpClientModule,
-    FormsModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [provideHttpClient()], 
+  providers: [provideHttpClient()], //Annotare i Services, particolari classi ts condivise da tutti i componenti
   bootstrap: [AppComponent] 
 })
 export class AppModule { }

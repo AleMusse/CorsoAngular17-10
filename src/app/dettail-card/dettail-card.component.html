@@ -1,0 +1,30 @@
+
+<div class="flex" >
+    <div class="card text-bg-dark" >
+        <img [src]="detta2.foto" class="card-img" alt="..." />
+        <div class="card-img-overlay">
+            <h5 class="card-title" [ngClass]="{
+                'cè':detta2.disponibile,
+                'ncè': !detta2.disponibile,
+                barra : !detta2.disponibile
+                }">
+                {{detta2.nome}} 
+                <div [ngClass]="detta2.disponibile? 'cerchioV':'cerchioR'"></div>
+
+            </h5>
+            <p class="btns">
+                <button class="dettagli" (click)="indietro()"><img src="back.png" alt=""></button>
+                <button class="delet"   (click)="delet()"><img src="bin.png" alt=""></button>
+            </p>
+            <p class="card-text"><b>Colore: </b>{{detta2.colore}} </p>
+            <p class="card-text"><b>taglia: </b>{{detta2.taglia}} </p>
+            <p class="card-text"><b>Costo </b>{{ detta2.prezzo | currency: "EUR" }} </p>
+            <p class="card-text"><b>Quantita: </b>{{detta2.quantita >= 1 ? detta2.quantita : 'non disponibile'}}</p>
+
+            <div class="flut">
+                <p [ngClass]="detta2.disponibile? 'disp':'nodisp'"><b>{{detta2.nome}}</b></p>
+                <p>{{detta2.disponibile? "Disponibile":"Non Disponibile"}}</p>
+            </div>
+        </div>
+    </div>
+  </div>
